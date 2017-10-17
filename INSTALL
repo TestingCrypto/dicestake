@@ -1,0 +1,9 @@
+Building DiceStake
+
+See doc/readme-qt.rst for instructions on building DiceStake QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of DiceStake.
+
+See doc/build-*.txt for instructions on building dicestaked,
+the intended-for-services, no-graphical-interface, reference
+implementation of DiceStake.
