@@ -1,0 +1,160 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "DiceStake Explorer",
+
+  "address": "50.83.11.14:3007",
+
+  // coin name
+  "coin": "DiceStake",
+
+  // coin symbol
+  "symbol": "DCS",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Simplex",
+
+  // port to listen for requests on.
+  "port" : 3007,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "",
+    "password": "",
+    "database": "",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 24894,
+    "user": "",
+    "pass": ""
+  },
+
+  // confirmations
+  "confirmations": 10,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": false,
+    "facebook": false,
+    "googleplus": false,
+    "search": true,
+    "movement": true,
+    "network": true
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POS",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 500,
+    "blockhash": "000000014dd77a338ff45275ec19f2a8d1c7aac076117223fef12b95f375a91d",
+    "txhash": "dae21c7e74f0767563e9c80c98f61ad8518b0fa7d72de37138cfbea6c18567c7",
+    "address": "8ZuZUyJg4CECCZerGaTdFqRYo8iZsCR8e9"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "DCS",
+    "exchange": "BTC",
+    "enabled": ["yobit"],
+    "cryptopia_id": "1658",
+    "ccex_key" : "Get-Your-Own-Key",
+    "default": "yobit"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 1,
+    "low_flag": 10,
+    "high_flag": 100
+  },
+
+  // twitter, facebook, googleplus
+  "twitter": "yourtwitterpage",
+  "facebook": "yourfacebookpage",
+  "googleplus": "yourgooglepluspage",
+
+  //genesis
+  "genesis_tx": "ef1f12fdd9f3a3e18dae9e7a24dcd734f33c9caad1db49260c2eab38a2d1abc9",
+  "genesis_block": "000009bee3420f751ec149bd2659fb339942687aceb696fca37a1b12264ad20b",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": false,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "BALANCES",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "K",
+
+  // Address labels
+  // example : "8DICEi8BURND783xxyW9GWmooBYfEJBgv7": {"label": "This is a burn address", "type":"danger", "url":"http://404.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  "8YUt6i8pB3rD783xxyW9GWmooBYfEJBgv7": {"label": "Community Donation Development address", "type":"primary", "url":"http://50.83.11.14:3007"}
+  }
+}
