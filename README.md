@@ -1,7 +1,26 @@
+What is DiceStake?
 
-DiceStake development tree
+DiceStake is a gambling currency, with PoS 1% per year.  Consider that 1% as your "house edge" for those who decide to hold and stake.  DCS will be available to game on dice sites in future. DiceStake is 100% Free Airdrop Distribution, according to the dice roll. Read Airdrop Details @ https://bitcointalk.org/index.php?topic=2279045 && Summary - dicestake Last Active: 	November 26, 2017, 02:00:02 AM
 
-DiceStake is a PoS-based cryptocurrency.
+DiceStake (DCS)
+===========================
+  Algorithm Scrypt
+  Type PoS (PoW last block @ 1000)
+  Coin name DiceStake
+  Coin abbreviation DCS
+  Address letter 8
+  RPC port 24894
+  P2P port 24893
+  Block reward 100 coins
+  Total coin supply 100,000,000 coins
+  Premine percent 58%
+  Premine amount 58,000,000 coins
+  PoS percentage   1% per year
+  Last PoW block   block 1000
+  Coinbase maturity 10 blocks
+  Target spacing 64 seconds
+  Target time span 1 block
+  Transaction confirmations 6 blocks
 
 Development process
 ===========================
