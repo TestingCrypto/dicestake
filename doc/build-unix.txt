@@ -102,23 +102,22 @@ Berkeley DB
 -----------
 You need Berkeley DB. If you have to build Berkeley DB yourself:
 
-# Add db4.8 repository and update
-sudo add-apt-repository ppa:bitcoin/bitcoin
+# Add db5.3 repository and update
 sudo apt-get update
-sudo apt-get install libdb4.8-dev libdb4.8++-dev
+sudo apt-get install libdb5.3
 
-# Get db4.8 source, compile and install
-wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
-tar -xzvf db-4.8.30.NC.tar.gz
-cd db-4.8.30.NC/build_unix
+# Get db5.3 source, compile and install
+wget http://download.oracle.com/berkeley-db/db-5.3.28.NC.tar.gz
+tar -xzvf db-5.3.28.NC.tar.gz
+cd db-5.3.28.NC/build_unix
 ../dist/configure --enable-cxx
 make
 sudo make install
-# Tell your system where to find db4.8
-export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.4.8/include"
-export BDB_LIB_PATH="/usr/local/BerkeleyDB.4.8/lib"
-sudo ln -s /usr/local/BerkeleyDB.4.8/lib/libdb-4.8.so /usr/lib/libdb-4.8.so
-sudo ln -s /usr/local/BerkeleyDB.4.8/lib/libdb_cxx-4.8.so /usr/lib/libdb_cxx-4.8.so
+# Tell your system where to find db5.3
+export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.5.3/include"
+export BDB_LIB_PATH="/usr/local/BerkeleyDB./lib"
+sudo ln -s /usr/local/BerkeleyDB.5.3/lib/libdb-5.3.so /usr/lib/libdb-5.3.so
+sudo ln -s /usr/local/BerkeleyDB.5.3/lib/libdb_cxx-5.3.so /usr/lib/libdb_cxx-5.3.so
 sudo ldconfig
 
 
@@ -144,9 +143,9 @@ sudo ldconfig
 openSSL
 -------
 # Get openssl source, compile and install
-wget http://www.openssl.org/source/openssl-1.0.1e.tar.gz
-tar -xzvf openssl-1.0.1e.tar.gz
-cd openssl-1.0.1e
+wget http://www.openssl.org/source/openssl-1.1.0h.tar.gz
+tar -xzvf openssl-1.1.0h.tar.gz
+cd openssl-1.1.0h
 ./config --prefix=/usr/local enable-ec enable-ecdh enable-ecdsa ALL=?
 make
 sudo make install
